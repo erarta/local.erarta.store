@@ -125,9 +125,9 @@ services:
     volumes:
       - ./cloudflared/config.yml:/etc/cloudflared/config.yml:ro
       - ./tunnel-credentials.json:/etc/cloudflared/credentials.json:ro
-    networks: ['demo']
-    depends_on:
-      - n8n
+    network_mode: host
+    extra_hosts:
+      - "n8n:127.0.0.1"
 
   # For Mac with Apple Silicon - use host Ollama
   # Uncomment below if you want containerized Ollama instead
