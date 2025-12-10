@@ -5,6 +5,9 @@
 tunnel: 331eeac5-d092-4c6e-9d73-169fe759fb94
 credentials-file: /etc/cloudflared/credentials.json
 
+# Force HTTP/2 instead of QUIC (QUIC may be blocked on corporate networks)
+protocol: http2
+
 ingress:
   # n8n - workflow automation
   - hostname: local.erarta.store
