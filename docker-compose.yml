@@ -31,8 +31,7 @@ x-n8n: &service-n8n
     - WEBHOOK_URL=https://local.erarta.store
     - NODES_EXCLUDE=
   env_file:
-    - path: .env
-      required: true
+    - .env
 
 x-ollama: &service-ollama
   image: ollama/ollama:latest
