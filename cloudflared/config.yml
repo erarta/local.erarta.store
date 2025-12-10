@@ -1,0 +1,18 @@
+# Cloudflare Tunnel Configuration
+# Replace <TUNNEL_ID> with your actual tunnel ID after running:
+# cloudflared tunnel create local-erarta
+
+tunnel: <TUNNEL_ID>
+credentials-file: /etc/cloudflared/credentials.json
+
+ingress:
+  # n8n - workflow automation
+  - hostname: local.erarta.store
+    service: http://n8n:5678
+
+  # SSH access (optional - uncomment if needed)
+  # - hostname: ssh.local.erarta.store
+  #   service: ssh://localhost:22
+
+  # Catch-all (required)
+  - service: http_status:404
