@@ -2,7 +2,7 @@
 # Replace <TUNNEL_ID> with your actual tunnel ID after running:
 # cloudflared tunnel create local-erarta
 
-tunnel: <TUNNEL_ID>
+tunnel: 331eeac5-d092-4c6e-9d73-169fe759fb94
 credentials-file: /etc/cloudflared/credentials.json
 
 ingress:
